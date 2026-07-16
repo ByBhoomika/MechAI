@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% block title %}
+Machine Design
+{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/machine_design.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+
+    {% include "sidebar.html" %}
+
+    <main class="main-content">
+
+        <h1>⚙️ Machine Design</h1>
+
+        <div class="design-card">
+
+            <div class="input-group">
+
+                <label>Select Tool</label>
+
+                <select id="toolSelect">
+
+                    <option value="shaft">Shaft Design</option>
+                    <option value="key">Key Design</option>
+                    <option value="bolt">Bolt Design</option>
+                    <option value="spring">Spring Design</option>
+                    <option value="bearing">Bearing Selection</option>
+                    <option value="gear">Gear Ratio</option>
+                    <option value="belt">Belt Drive</option>
+                    <option value="chain">Chain Drive</option>
+
+                </select>
+
+            </div>
+
+            <div id="toolInputs">
+
+                <!-- Dynamic inputs appear here -->
+
+            </div>
+
+            <button id="calculateDesignBtn">
+                Calculate
+            </button>
+
+        </div>
+
+        <div class="result-card">
+
+            <h2>Result</h2>
+
+            <div id="designResult">
+
+                Select a tool to begin.
+
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/machine_inputs.js') }}"></script>
+
+<script src="{{ url_for('static', filename='js/machine_results.js') }}"></script>
+
+<script src="{{ url_for('static', filename='js/machine_api.js') }}"></script>
+
+<script src="{{ url_for('static', filename='js/machine_design.js') }}"></script>
+{% endblock %}

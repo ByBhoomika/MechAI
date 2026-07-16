@@ -1,0 +1,118 @@
+/* =========================
+   MechAI Design System
+========================= */
+
+:root{
+    --bg:#0F172A;
+    --sidebar:#111827;
+    --surface:#1E293B;
+
+    --primary:#2563EB;
+    --primary-hover:#1D4ED8;
+
+    --text:#F8FAFC;
+    --secondary:#94A3B8;
+
+    --border:#334155;
+
+    --radius:18px;
+
+    --transition:.25s ease;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI", sans-serif;
+}
+
+html,
+body{
+    height:100%;
+}
+
+body{
+    background:var(--bg);
+    color:var(--text);
+    overflow-y:auto;
+    overflow-x:hidden;
+}
+
+.container{
+    display:grid;
+    grid-template-columns:280px 1fr;
+    min-height:100vh;
+}
+
+.main-content{
+
+    display:flex;
+
+    flex-direction:column;
+
+    padding:30px;
+
+    gap:20px;
+
+    min-height:100vh;
+
+}
+
+.hero{
+    text-align:center;
+}
+
+.hero h1{
+    font-size:48px;
+    margin-bottom:12px;
+}
+
+.hero p{
+    color:var(--secondary);
+    font-size:20px;
+}
+
+.feature-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.card{
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+    border-radius:var(--radius);
+
+    padding:25px;
+
+    cursor:pointer;
+
+    transition:var(--transition);
+
+}
+
+.card:hover{
+
+    transform:translateY(-6px);
+
+    border-color:var(--primary);
+
+}
+
+.card h2{
+    font-size:32px;
+    margin-bottom:10px;
+}
+
+.card h3{
+    margin-bottom:10px;
+}
+
+.card p{
+    color:var(--secondary);
+    line-height:1.6;
+}

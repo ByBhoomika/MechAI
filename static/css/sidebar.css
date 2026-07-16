@@ -1,0 +1,86 @@
+.sidebar{
+    background:#111827;
+    border-right:1px solid #334155;
+    padding:30px;
+    display:flex;
+    flex-direction:column;
+    min-height:100vh;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    margin-bottom:35px;
+    cursor:pointer;
+}
+
+.logo-icon{
+    font-size:34px;
+}
+
+.logo h2{
+    color:#F8FAFC;
+}
+
+.logo p{
+    color:#94A3B8;
+    font-size:13px;
+}
+
+.menu{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.menu-item{
+
+    display:flex;
+    align-items:center;
+
+    gap:12px;
+
+    padding:14px 16px;
+
+    color:#F8FAFC;
+
+    text-decoration:none;
+
+    border-radius:12px;
+
+    transition:all .25s ease;
+
+    font-weight:500;
+
+}
+
+.menu-item:hover{
+
+    background:#1E40AF;
+
+    transform:translateX(4px);
+
+}
+
+.menu-item.active{
+
+    background:#2563EB;
+
+    font-weight:600;
+
+    box-shadow:0 0 0 1px rgba(255,255,255,.08);
+
+}
+
+.history{
+
+    margin-top:auto;
+
+    color:#94A3B8;
+
+    padding-top:25px;
+
+    border-top:1px solid #334155;
+
+}

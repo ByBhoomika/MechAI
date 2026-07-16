@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block title %}AI Assistant | MechAI{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+
+    {% include "sidebar.html" %}
+
+    <main class="main-content">
+
+        <div class="chat-box" id="chatBox">
+
+            <div class="message bot">
+                👋 Hello! I'm MechAI.
+                <br><br>
+                Ask me anything about Mechanical Engineering.
+            </div>
+
+        </div>
+
+        <section class="input-container">
+
+            <input
+                type="file"
+                id="pdfUpload"
+                accept=".pdf"
+                hidden>
+
+            <button id="uploadBtn">
+                📄
+            </button>
+
+            <input
+                id="userInput"
+                type="text"
+                placeholder="Ask MechAI anything...">
+
+            <button id="sendBtn">
+                ➜
+            </button>
+
+        </section>
+
+    </main>
+
+</div>
+
+{% endblock %}

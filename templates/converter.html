@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+
+{% block title %}
+Unit Converter
+{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/converter.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+
+    <!-- Sidebar -->
+    {% include "sidebar.html" %}
+
+    <!-- Main Content -->
+
+    <main class="main-content">
+
+        <h1>🧮 Unit Converter</h1>
+
+        <div class="converter-card">
+
+            <div class="input-group">
+
+                <label>Category</label>
+
+                <select id="category">
+                    <option value="length">Length</option>
+                    <option value="force">Force</option>
+                    <option value="area">Area</option>
+                    <option value="torque">Torque</option>
+                </select>
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Value</label>
+
+                <input
+                    type="number"
+                    id="value"
+                    placeholder="Enter Value">
+
+            </div>
+
+            <div class="input-group">
+
+                <label>From Unit</label>
+
+                <select id="fromUnit"></select>
+
+            </div>
+
+            <div class="input-group">
+
+                <label>To Unit</label>
+
+                <select id="toUnit"></select>
+
+            </div>
+
+            <button id="convertBtn">
+                Convert
+            </button>
+
+        </div>
+
+        <div class="result-card">
+
+            <h2>Result</h2>
+
+            <div id="result">
+                Waiting for conversion...
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/converter.js') }}"></script>
+{% endblock %}

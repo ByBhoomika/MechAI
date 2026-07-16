@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+
+{% block title %}
+Material Database
+{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/materials.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+
+{% include "sidebar.html" %}
+
+    <main class="main-content">
+
+        <h1>🏭 Material Database</h1>
+
+        <div class="material-card">
+
+            <div class="input-group">
+
+                <label>Search Material</label>
+
+                <input
+                    type="text"
+                    id="materialSearch"
+                    placeholder="Search by material name...">
+
+            </div>
+            <div class="input-group">
+
+    <label>Browse Materials</label>
+
+    <select id="materialList">
+
+        <option value="">Select Material</option>
+
+    </select>
+
+</div>
+
+        </div>
+
+        <div class="result-card">
+
+            <h2>Material Properties</h2>
+
+            <div id="materialResult">
+
+                Search for a material to view its properties.
+
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/materials.js') }}"></script>
+{% endblock %}

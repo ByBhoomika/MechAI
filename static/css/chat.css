@@ -1,0 +1,85 @@
+.input-container {
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+}
+#uploadBtn,
+#sendBtn{
+
+    width:52px;
+    height:52px;
+
+    border:none;
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-size:20px;
+
+    background:#2f80ed;
+    color:white;
+
+    transition:0.2s;
+}
+
+#uploadBtn:hover,
+#sendBtn:hover{
+    transform:scale(1.05);
+}
+
+#userInput{
+
+    flex:1;
+
+    height:52px;
+
+    border:none;
+
+    border-radius:12px;
+
+    padding:0 18px;
+
+    font-size:16px;
+
+    background:#1f2433;
+    color:white;
+}
+
+#userInput::placeholder{
+    color:#9aa7c7;
+}
+.chat-box {
+    flex: 1;
+
+    overflow-y: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+
+    padding: 20px;
+
+    border-radius: 15px;
+
+    background: #161b22;
+
+    min-height: 0;
+}
+.message{
+
+    max-width:80%;
+
+    word-wrap:break-word;
+
+    overflow-wrap:anywhere;
+
+    white-space:pre-wrap;
+
+}

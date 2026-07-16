@@ -1,0 +1,184 @@
+{
+    background:#1e293b;
+    border:1px solid #334155;
+    border-radius:16px;
+    padding:25px;
+    margin-top:25px;
+}
+
+.result-section h3{
+    color:#60a5fa;
+    margin-top:15px;
+}
+
+.result-section p{
+    color:#e2e8f0;
+    font-size:17px;
+    margin-top:6px;
+}
+
+.result-section h2{
+    margin-top:15px;
+    font-size:32px;
+    color:#22c55e;
+}
+.input-group{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+    margin-bottom:18px;
+}
+
+.input-group label{
+    font-weight:600;
+}
+
+.input-group input,
+.input-group select{
+    width:100%;
+    padding:14px;
+    border-radius:10px;
+    border:1px solid #334155;
+    background:#0f172a;
+    color:white;
+    font-size:16px;
+}
+
+#calculateBtn{
+    width:100%;
+    padding:16px;
+    border:none;
+    border-radius:12px;
+    background:#2563eb;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+}
+
+#calculateBtn:hover{
+    background:#1d4ed8;
+}
+.result-grid{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+.result-box{
+
+    background:#0f172a;
+
+    border:1px solid #334155;
+
+    border-radius:12px;
+
+    padding:20px;
+
+}
+
+.result-box h3{
+
+    margin-bottom:12px;
+
+    color:#60a5fa;
+
+}
+
+.formula{
+
+    font-size:22px;
+
+    font-family:Cambria, serif;
+
+    color:white;
+
+}
+
+.answer-box{
+
+    border:2px solid #22c55e;
+
+}
+
+.answer{
+
+    font-size:36px;
+
+    font-weight:bold;
+
+    color:#22c55e;
+
+}
+.calculator-card,
+.result-card{
+    width:100%;
+}
+
+.result-card{
+    margin-bottom:30px;
+}
+#clearBtn{
+
+    width:100%;
+
+    padding:16px;
+
+    margin-top:12px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#475569;
+
+    color:white;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+}
+
+#clearBtn:hover{
+
+    background:#334155;
+
+}
+.input-row{
+
+    display:flex;
+
+    gap:12px;
+
+}
+
+.input-row input{
+
+    flex:1;
+
+}
+
+.input-row select{
+
+    width:120px;
+
+}
+.formula{
+
+    font-size:26px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    min-height:70px;
+
+}

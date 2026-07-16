@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block title %}Home | MechAI{% endblock %}
+
+{% block content %}
+
+<div class="container">
+
+    {% include "sidebar.html" %}
+
+    <main class="main-content">
+
+        <section class="hero">
+            <h1>Welcome to MechAI 👋</h1>
+            <p>Your Mechanical Engineering Workspace</p>
+        </section>
+
+        <section class="feature-grid">
+
+            <div class="card" onclick="window.location.href='/calculator'">
+                <h2>📊</h2>
+                <h3>Engineering Calculator</h3>
+                <p>Mechanical engineering calculations with step-by-step solutions.</p>
+            </div>
+
+            <div class="card" onclick="window.location.href='/materials'">
+                <h2>🏭</h2>
+                <h3>Material Database</h3>
+                <p>Search engineering materials and mechanical properties.</p>
+            </div>
+
+            <div class="card" onclick="window.location.href='/converter'">
+                <h2>🧮</h2>
+                <h3>Unit Converter</h3>
+                <p>Convert engineering units quickly.</p>
+            </div>
+
+            <div class="card" onclick="window.location.href='/machine-design'">
+                <h2>⚙️</h2>
+                <h3>Machine Design</h3>
+                <p>Shafts, gears, bearings, belts, chains and more.</p>
+            </div>
+
+            <div class="card" onclick="window.location.href='/chat'">
+                <h2>🤖</h2>
+                <h3>AI Assistant</h3>
+                <p>Chat with AI and analyze engineering PDFs.</p>
+            </div>
+
+            <div class="card" onclick="window.location.href='/settings'">
+                <h2>⚙️</h2>
+                <h3>Settings</h3>
+                <p>Customize MechAI preferences.</p>
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+{% endblock %}

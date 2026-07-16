@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+
+{% block title %}
+Engineering Calculator
+{% endblock %}
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/calculator.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+
+    <!-- Sidebar -->
+    {% include "sidebar.html" %}
+    <main class="main-content">
+
+        <h1>📊 Engineering Calculator</h1>
+
+        <div class="calculator-card">
+
+            <div class="input-group">
+
+                <label>Select Calculator</label>
+
+                <select id="calculatorType">
+                    <option value="stress">Stress</option>
+                    <option value="strain">Strain</option>
+                    <option value="pressure">Pressure</option>
+                    <option value="torque">Torque</option>
+                    <option value="power">Power</option>
+                </select>
+
+            </div>
+
+            <div class="input-group">
+
+                <label id="label1">Force (N)</label>
+
+                <div class="input-row">
+
+                    <input
+                            type="number"
+                            id="value1"
+                            placeholder="Enter Force">
+
+                    <select id="unit1">
+                        <option value="N">N</option>
+                        <option value="kN">kN</option>
+                    </select>
+
+                </div>
+
+            </div>
+
+            <div class="input-group">
+
+                <label id="label2">Area (m²)</label>
+
+                <div class="input-row">
+
+                    <input
+                            type="number"
+                            id="value2"
+                            placeholder="Enter Area">
+
+                    <select id="unit2">
+                        <option value="m2">m²</option>
+                        <option value="cm2">cm²</option>
+                        <option value="mm2">mm²</option>
+                    </select>
+
+                </div>
+
+            </div>
+
+            <button id="calculateBtn">
+                Calculate
+            </button>
+
+            <button id="clearBtn">
+                Clear
+            </button>
+
+        </div>
+
+        <div class="result-card">
+
+            <h2>Result</h2>
+
+            <div id="result">
+                Waiting for calculation...
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/calculator.js') }}"></script>
+{% endblock %}

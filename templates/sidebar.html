@@ -1,0 +1,55 @@
+<aside class="sidebar">
+
+    <div class="logo"
+         onclick="window.location.href='/'"
+         style="cursor:pointer;">
+
+        <span class="logo-icon">⚙️</span>
+
+        <div>
+            <h2>MechAI</h2>
+            <p>Mechanical Engineering Workspace</p>
+        </div>
+
+    </div>
+
+    <nav class="menu">
+
+        <a href="/"
+           class="menu-item {% if active_page == 'home' %}active{% endif %}">
+            🏠 Home
+        </a>
+
+        <a href="/chat"
+           class="menu-item {% if active_page == 'chat' %}active{% endif %}">
+            🤖 AI Assistant
+        </a>
+
+        <a href="/calculator"
+           class="menu-item {% if active_page == 'calculator' %}active{% endif %}">
+            📊 Engineering Calculator
+        </a>
+
+        <a href="/converter"
+           class="menu-item {% if active_page == 'converter' %}active{% endif %}">
+            🧮 Unit Converter
+        </a>
+
+        <a href="/machine-design"
+           class="menu-item {% if active_page == 'machine_design' %}active{% endif %}">
+            ⚙️ Machine Design
+        </a>
+
+        <a href="/materials"
+           class="menu-item {% if active_page == 'materials' %}active{% endif %}">
+            🏭 Material Database
+        </a>
+
+        <a href="/settings"
+           class="menu-item {% if active_page == 'settings' %}active{% endif %}">
+            ⚙️ Settings
+        </a>
+
+    </nav>
+
+</aside>

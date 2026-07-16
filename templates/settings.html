@@ -1,0 +1,149 @@
+{% extends "base.html" %}
+
+{% block title %}Settings | MechAI{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet"
+      href="{{ url_for('static', filename='css/settings.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+
+    {% include "sidebar.html" %}
+
+    <main class="main-content">
+
+        <section class="hero">
+            <h1>⚙️ Settings</h1>
+            <p>Customize your MechAI experience.</p>
+        </section>
+
+            <div class="settings-card">
+
+                <h3>📐 Engineering Preferences</h3>
+                <hr>
+
+                <p><strong>Default Units</strong></p>
+
+                <label>
+                    <input type="radio" name="units" value="si" checked>
+                    SI
+                </label>
+
+                <br>
+
+                <label>
+                    <input type="radio" name="units" value="imperial">
+                    Imperial
+                </label>
+
+                <br><br>
+
+                <p><strong>Decimal Precision</strong></p>
+
+                <select id="precision">
+                    <option value="2">2</option>
+                    <option value="3" selected>3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+
+            </div>
+
+            <div class="settings-card">
+
+                <h3>🤖 AI Assistant</h3>
+                <hr>
+
+                <p><strong>Response Style</strong></p>
+
+                <label>
+                    <input type="radio" name="response" value="detailed" checked>
+                    Detailed
+                </label>
+
+                <br>
+
+                <label>
+                    <input type="radio" name="response" value="concise">
+                    Concise
+                </label>
+
+                <br><br>
+
+                <label>
+                    <input type="checkbox" id="markdown" checked>
+                    Enable Markdown
+                </label>
+
+                <br><br>
+
+                <label>
+                    <input type="checkbox" id="latex" checked>
+                    Render LaTeX Equations
+                </label>
+
+            </div>
+
+            <div class="settings-card">
+
+                <h3>🏠 Home</h3>
+                <hr>
+
+                <label>
+                    <input type="checkbox" id="welcome" checked>
+                    Show Welcome Banner
+                </label>
+
+                <br><br>
+
+                <label>
+                    <input type="checkbox" id="descriptions" checked>
+                    Show Module Descriptions
+                </label>
+
+            </div>
+
+            <div class="settings-card">
+
+            <div class="settings-card">
+
+                <h3>ℹ️ About</h3>
+                <hr>
+
+                <p><strong>MechAI</strong></p>
+                <p>Version 1.0</p>
+                <p>Mechanical Engineering Workspace</p>
+
+                <br>
+
+                <p><strong>Developed by</strong></p>
+                <p>Bhoomika Singh</p>
+
+            </div>
+
+        </div>
+
+        <div class="settings-actions">
+
+            <button id="saveSettingsBtn" class="primary-btn">
+                💾 Save Settings
+            </button>
+
+            <button id="resetSettingsBtn" class="secondary-btn">
+                🔄 Reset Defaults
+            </button>
+
+        </div>
+
+    </main>
+
+</div>
+
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/settings.js') }}"></script>
+{% endblock %}
