@@ -113,8 +113,6 @@ MechAI/
 
 B.Tech Mechanical Engineering Student
 
-Interested in Mechanical Engineering, Artificial Intelligence, CAD, Python, Web Development, and Engineering Software Development.
-
 ---
 
 
