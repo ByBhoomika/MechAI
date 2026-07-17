@@ -107,7 +107,7 @@ MechAI/
 
 ---
 
-## 👩‍💻 Author
+## 👩‍💻 Developer
 
 **Bhoomika Singh**
 
