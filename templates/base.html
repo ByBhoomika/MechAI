@@ -1,88 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>{% block title %}MechAI{% endblock %}</title>
 
-    <meta name="description"
-          content="{% block description %}MechAI is a free AI assistant for mechanical engineering students.{% endblock %}">
+<meta name="description"
+      content="{% block description %}MechAI is a free AI assistant for mechanical engineering students.{% endblock %}">
 
-    <meta property="og:title" content="{% block title %}MechAI{% endblock %}">
-    <meta property="og:description"
-          content="{% block description %}MechAI is a free AI assistant for mechanical engineering students.{% endblock %}">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="{{ request.url }}">
+<meta property="og:title" content="MechAI">
 
-    <!-- Structured Data -->
+<meta property="og:description"
+      content="MechAI is a free AI assistant for mechanical engineering students featuring calculators, converters, materials database and machine design tools.">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mechai-exxh.onrender.com">
+
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "WebApplication",
-      "name": "MechAI",
-      "url": "https://mechai-exxh.onrender.com",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "AI assistant for mechanical engineering students featuring calculators, unit converters, materials database and machine design tools."
+      "@context":"https://schema.org",
+      "@type":"WebApplication",
+      "name":"MechAI",
+      "url":"https://mechai-exxh.onrender.com",
+      "applicationCategory":"EngineeringApplication",
+      "operatingSystem":"Web",
+      "description":"AI assistant for mechanical engineering students featuring calculators, unit converters, materials database and machine design tools."
     }
     </script>
 
-    <!-- Global CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/sidebar.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/cards.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/chat.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
 
-    <!-- Page Specific CSS -->
-    {% block extra_css %}
-    {% endblock %}
+    {% block extra_css %}{% endblock %}
 
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-L91XHZGD08"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-L91XHZGD08');
     </script>
 
-    <!-- KaTeX -->
     <link rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
 
-    <script defer
-            src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
 
-    <script defer
-            src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
-
-    <!-- Markdown -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
 </head>
 
 <body>
 
-{% block content %}
-{% endblock %}
+{% block content %}{% endblock %}
 
-<!-- Global JavaScript -->
 <script src="{{ url_for('static', filename='js/app.js') }}"></script>
 <script src="{{ url_for('static', filename='js/ui.js') }}"></script>
 <script src="{{ url_for('static', filename='js/api.js') }}"></script>
 <script src="{{ url_for('static', filename='js/formula_renderer.js') }}"></script>
 <script src="{{ url_for('static', filename='js/engineering_api.js') }}"></script>
 
-<!-- Page Specific JavaScript -->
-{% block extra_js %}
-{% endblock %}
+{% block extra_js %}{% endblock %}
 
 </body>
-
 </html>
