@@ -9,13 +9,27 @@
 
     <title>{% block title %}MechAI{% endblock %}</title>
 
-<meta name="description"
-      content="{% block description %}MechAI is a free AI assistant for mechanical engineering students.{% endblock %}">
-      <meta property="og:title" content="{% block title %}MechAI{% endblock %}">
-<meta property="og:description"
-      content="{% block description %}MechAI is a free AI assistant for mechanical engineering students.{% endblock %}">
-<meta property="og:type" content="website">
-<meta property="og:url" content="{{ request.url }}">
+    <meta name="description"
+          content="{% block description %}MechAI is a free AI assistant for mechanical engineering students.{% endblock %}">
+
+    <meta property="og:title" content="{% block title %}MechAI{% endblock %}">
+    <meta property="og:description"
+          content="{% block description %}MechAI is a free AI assistant for mechanical engineering students.{% endblock %}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ request.url }}">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "MechAI",
+      "url": "https://mechai-exxh.onrender.com",
+      "applicationCategory": "EngineeringApplication",
+      "operatingSystem": "Web",
+      "description": "AI assistant for mechanical engineering students featuring calculators, unit converters, materials database and machine design tools."
+    }
+    </script>
 
     <!-- Global CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
@@ -27,15 +41,16 @@
     <!-- Page Specific CSS -->
     {% block extra_css %}
     {% endblock %}
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-L91XHZGD08"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-L91XHZGD08');
-</script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L91XHZGD08"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-L91XHZGD08');
+    </script>
 
     <!-- KaTeX -->
     <link rel="stylesheet"
