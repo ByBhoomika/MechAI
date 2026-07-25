@@ -9,6 +9,14 @@
 
     <title>{% block title %}MechAI{% endblock %}</title>
 
+<meta name="description"
+      content="{% block description %}MechAI is a free AI assistant for mechanical engineering students.{% endblock %}">
+      <meta property="og:title" content="{% block title %}MechAI{% endblock %}">
+<meta property="og:description"
+      content="{% block description %}MechAI is a free AI assistant for mechanical engineering students.{% endblock %}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ request.url }}">
+
     <!-- Global CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/sidebar.css') }}">

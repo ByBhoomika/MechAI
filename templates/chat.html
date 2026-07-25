@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 
-{% block title %}AI Assistant | MechAI{% endblock %}
+{% block title %}AI Engineering Chat – MechAI{% endblock %}
+
+{% block description %}
+Ask engineering questions and get AI-powered answers on thermodynamics, mechanics, machine design, manufacturing, materials and other mechanical engineering topics.
+{% endblock %}
 
 {% block extra_js %}
 <script src="{{ url_for('static', filename='js/chat.js') }}"></script>
