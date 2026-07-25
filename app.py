@@ -14,7 +14,6 @@ def sitemap():
 
 
 app.register_blueprint(home)
-app.register_blueprint(chat)
 app.register_blueprint(calculator)
 app.register_blueprint(converter)
 app.register_blueprint(materials)
