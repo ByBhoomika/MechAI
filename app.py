@@ -13,6 +13,11 @@ def sitemap():
 @app.route("/robots.txt")
 def robots():
     return send_from_directory("static", "robots.txt")
+from flask import send_from_directory
+
+@app.route("/ads.txt")
+def ads():
+    return send_from_directory("static", "ads.txt")
 
 
 
